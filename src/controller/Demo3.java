@@ -50,6 +50,7 @@ public class Demo3 {
         if (42 == 42.0){
             System.out.println("正确");
         }
+        System.out.println("--------------------------------------------------------------------");
         Integer integer = new Integer(200);
         Integer integer1 = new Integer(200);
         Integer num = 200;
