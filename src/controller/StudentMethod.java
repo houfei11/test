@@ -27,6 +27,8 @@ public class StudentMethod {
     }
     //创建一个随机获取学生集合的类
     public final static void randomStudent(ArrayList list) {
+        // random用法：random(x); 注释：x是个正整数
+        // 即可随机产生0~x之间的一切整数。 而且它是一个函数，不能单独使用。
         Random ran = new Random();
         int index = ran.nextInt(list.size());
         Student stu = (Student) list.get(index);
