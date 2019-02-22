@@ -8,6 +8,7 @@ import java.util.ArrayList;
  * 集合的类型主要有三种：set(集)，list(列表)，Map(映射)
  * 集合就是放数据的容器，准确的说就是放数据对象引用的容器。
  * 集合（只能存储对象，对象类型可以不一样）的长度可变，可在多数情况下使用。
+ * @author Administrator
  */
 public class Demo8 {
     public static void main(String[] args) {
