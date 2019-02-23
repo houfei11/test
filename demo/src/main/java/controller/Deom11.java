@@ -1,9 +1,6 @@
 package controller;
 
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.HashMap;
 
 public class Deom11 {
@@ -27,6 +24,7 @@ public class Deom11 {
         map.put("2","移库单");
         map.put("3","统配出");
         map.put("4","批发出");
+        // 使用String.valueOf()方法取Map集合的值，可以避免出现空指针异常
         System.out.println(String.valueOf(map.get("5")));
         System.out.println(map.get("5").toString());
     }
