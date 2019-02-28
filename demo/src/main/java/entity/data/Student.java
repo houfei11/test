@@ -7,6 +7,10 @@ public class Student {
     public String name;
     public int age;
     public String address;
+
+    public Student(String name, int age, String address) {
+    }
+
     public void study(){
         System.out.println(name + "在学习");
     }
