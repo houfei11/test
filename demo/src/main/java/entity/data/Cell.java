@@ -7,6 +7,9 @@ public class Cell {
     public int row;
     public int col;
 
+    public Cell(){
+
+    }
     public Cell(int row, int col) {
 
     }

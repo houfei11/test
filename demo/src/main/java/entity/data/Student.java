@@ -8,6 +8,9 @@ public class Student {
     public int age;
     public String address;
 
+    public Student(){
+
+    }
     public Student(String name, int age, String address) {
     }
 

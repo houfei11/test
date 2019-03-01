@@ -2,29 +2,32 @@ package constant;
 
 import entity.data.Cell;
 
+/**
+ * @author Administrator
+ */
 public class T {
-    Cell[] cells;
-    T(){
+    public Cell[] cells;
+    public T(){
         this(0,0);
     }
     public T(int row, int col){
         cells = new Cell[4];
-        cells[0] = new Cell(row,col);
-        cells[0] = new Cell(row,col+1);
-        cells[0] = new Cell(row,col+2);
-        cells[0] = new Cell(row+1,col+1);
+        this.cells[0] = new Cell(row,col);
+        this.cells[1] = new Cell(row,col+1);
+        this.cells[2] = new Cell(row,col+2);
+        this.cells[3] = new Cell(row+1,col+1);
     }
-    void drop(){
+    public void drop(){
         for (int i = 0; i < cells.length ; i++) {
             cells[i].row++;
         }
     }
-    void moveLeft(){
+    public void moveLeft(){
         for (int i = 0; i < cells.length ; i++) {
             cells[i].col--;
         }
     }
-    void moveRight(){
+    public void moveRight(){
         for (int i = 0; i < cells.length ; i++) {
             cells[i].col++;
         }
