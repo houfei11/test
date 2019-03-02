@@ -11,8 +11,10 @@ public class CellTest {
         Cell cell = new Cell();
         cell.row = 2;
         cell.col = 3;
-        cell.drop();
+//        cell.drop();
+//        System.out.println(cell);
         cell.moveLeft(2);
+//        System.out.println(cell);
         String str = cell.getCellInfo();
         System.out.println(str);
         cell.drop();

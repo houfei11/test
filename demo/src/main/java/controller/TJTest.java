@@ -9,8 +9,8 @@ import entity.data.Cell;
 public class TJTest {
     public static void main(String[] args) {
         T t = new T(2,3);
+        t.drop();
         t.print();
-        t.moveLeft();
         System.out.println(t);
         printWall(t);
     }

@@ -12,10 +12,10 @@ public class T {
     }
     public T(int row, int col){
         cells = new Cell[4];
-        this.cells[0] = new Cell(row,col);
-        this.cells[1] = new Cell(row,col+1);
-        this.cells[2] = new Cell(row,col+2);
-        this.cells[3] = new Cell(row+1,col+1);
+        cells[0] = new Cell(row,col);
+        cells[1] = new Cell(row,col+1);
+        cells[2] = new Cell(row,col+2);
+        cells[3] = new Cell(row+1,col+1);
     }
     public void drop(){
         for (int i = 0; i < cells.length ; i++) {
