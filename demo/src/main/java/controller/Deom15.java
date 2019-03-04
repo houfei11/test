@@ -10,7 +10,7 @@ public class Deom15 {
     public boolean hasMoney = false;
 
     public Deom15(int age) {
-
+        this.age = age;
     }
 
 

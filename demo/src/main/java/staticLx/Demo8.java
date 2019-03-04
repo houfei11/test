@@ -1,22 +1,32 @@
 package staticLx;
 
+/**
+ * shootgame设计
+ */
 public class Demo8 {
 }
-class Hero{ //英雄机
+class Hero extends FlyingObject{ //英雄机
 
 }
-class Airplane{ // 敌机
+class Airplane extends FlyingObject implements Enemy{ // 敌机 有得分行为
 
 }
-class Bee{ //小蜜蜂
+class Bee extends FlyingObject implements Award{ //小蜜蜂
 
 }
-class Bullet{ // 子弹
+class BigYellowBee extends FlyingObject implements Award{ // 大黄蜂
+
+}
+class Bullet extends FlyingObject{ // 子弹
 
 }
 class FlyingObject{ // 飞行物
-    image 宽 高 x y
 }
-class BossAirplane{
-
+class BossAirplane extends FlyingObject implements Enemy{ //boss机 有得分行为
+}
+interface Enemy{ //得分
+    int getScore();
+}
+interface Award{ // 奖励
+    int getType();
 }
