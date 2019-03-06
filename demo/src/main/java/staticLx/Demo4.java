@@ -6,8 +6,8 @@ package staticLx;
  */
 public class Demo4 {
     public static void main(String[] args) {
-        Doo doo = new Eoo(); // 向上造型
-        Eoo doo1 = (Eoo) doo; // 引用所指向的对象，就是该类型
+        Doo4 doo = new Eoo5(); // 向上造型
+        Eoo5 doo1 = (Eoo5) doo; // 引用所指向的对象，就是该类型
         Inter1 inter1 = (Inter1) doo; // 引用所指向的对象实现了该接口
         Foo foo = (Foo) doo; // ClassCastException类型转换异常
         if (doo instanceof Foo) { // false
@@ -21,9 +21,9 @@ interface Inter1{
 class Doo{
 
 }
-class Eoo extends Doo implements Inter1{
+class Eoo5 extends Doo4 implements Inter1{
 
 }
-class Foo extends Doo{
+class Foo extends Doo4 {
 
 }
