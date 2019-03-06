@@ -3,7 +3,7 @@ package staticLx;
 /**
  *  需求：计算相同周长不同形状的面积；
  */
-public class Demo1 {
+public class Demo28 {
     public static void main(String[] args) {
         //new Car(); 编译错误；原因:抽象类不能被实例化，但可以声明变量
 //        Shape s = new Square();
@@ -27,7 +27,7 @@ public class Demo1 {
         double max = ssh[0].area();
         int maxIndex = 0;
         for (int i = 1; i < ssh.length ; i++) {
-            double are = new ssh[i].area();
+            double are = ssh[i].area();
             if (are > max){
                 max = are;
                 maxIndex = i;
@@ -55,6 +55,7 @@ class Square extends Shape{
     public Square(double c) {
         super(c);
     } //方形类
+    @Override
     double area(){ // 重写抽象方法-- 不完整变完整
         return 0.0625*c*c;
     }
@@ -63,6 +64,7 @@ class Circle extends Shape{
     public Circle(double c) {
         super(c);
     } //圆形类
+    @Override
     double area(){
         return 0.0796*c*c;
     }
@@ -71,6 +73,7 @@ class six extends Shape{
     public six(double c) {
         super(c);
     } //六边形类
+    @Override
     double area(){
         return 0.0721*c*c;
     }
