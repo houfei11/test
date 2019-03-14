@@ -86,6 +86,7 @@ class CopyDemo2{
         }
     }
 }
+
 /**
  * 需求：我有一个文本文件中储存了几个名称，写一个程序随机获得一个人的名字
  * 分析：
@@ -110,6 +111,7 @@ class CopyDemo3{
         System.out.println("幸运用户是：" + name);
     }
 }
+
 /**
  * 复制单级文件夹案例
  * 需求：复制单机文件夹(复制文件夹所有的文件到另一个文件夹中)
@@ -142,6 +144,7 @@ class CopyDemo4{
             copy(file, newFile);
         }
     }
+
     public static void copy(File file, File newFile) throws IOException {
         // 数据源
         BufferedInputStream bis = new BufferedInputStream(new FileInputStream(

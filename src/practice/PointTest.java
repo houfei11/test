@@ -2,6 +2,7 @@ package practice;
 
 /**
  * 测试类
+ * @author Administrator
  */
 public class PointTest {
     public static void main(String[] args) {

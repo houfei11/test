@@ -6,6 +6,7 @@ import java.io.IOException;
 
 /**
  * 文件输入流，是一个低级流，用于从文件中读取字节
+ * @author Administrator
  */
 public class FISDemo {
     public static void main(String[] args) throws IOException {
