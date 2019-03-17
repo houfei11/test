@@ -40,7 +40,15 @@ public class Person implements Serializable {
         return age;
     }
 
-    public void setAge(int age) {
+    /**
+     * 当一个方法中使用throw抛出一个异常时，就要在方法上使用throws声明该类异常的抛出以通知调用者解决
+     * @param age
+     * @throws Exception
+     */
+    public void setAge(int age) throws Exception{
+        if (age < 0 || age > 100){
+            throw new Exception("年龄不合法！！");
+        }
         this.age = age;
     }
 
