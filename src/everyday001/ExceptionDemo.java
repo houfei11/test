@@ -1,9 +1,8 @@
 package everyday001;
 
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
+import java.awt.*;
+import java.io.*;
+import java.sql.SQLException;
 
 /**
  * java异常捕获机制,try - catch
@@ -97,6 +96,48 @@ class ExceptionDemo4{
  * 重写父类一个含有throws异常抛出声明的方法时，子类该方法throws的重写原则
  */
 class ExceptionDemo5{
-    public static void main(String[] args) {
+    public void dosome() throws IOException, AWTException{
+
     }
+}
+class son extends ExceptionDemo5{
+    // 不再抛出任何异常
+//    public void dosome(){
+//
+//    }
+    // 可仅抛出父类方法中抛出的部分异常
+//    public void dosome() throws IOException{
+//
+//    }
+    // 允许抛出父类方法抛出的子类型异常
+//    public void dosome() throws FileNotFoundException {
+//
+//    }
+    // 不允许抛出额外异常
+//    public void dosome() throws SQLException {
+//
+//    }
+}
+
+/**
+ * Exception
+ */
+class ExceptionDemo6{
+    public static void main(String[] args) {
+        System.out.println("程序开始了！！");
+        try{
+            String str = "abc";
+            System.out.println(Integer.parseInt(str));
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        System.out.println("程序结束了！！");
+    }
+}
+
+/**
+ * 自定义异常，通常用来描述业务逻辑上的错误，自定义异常的名字应当做到见明知意
+ */
+class AgeException extends Exception{
+
 }
