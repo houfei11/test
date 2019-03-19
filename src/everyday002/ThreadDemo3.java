@@ -75,6 +75,7 @@ class ThreadDemo5{
 class ThreadDemo6{
     public static void main(String[] args) {
         Thread min = new Thread(){
+            @Override
             public void run(){
                 for (int i = 0; i < 100 ; i++) {
                     System.out.println("min");
@@ -82,6 +83,7 @@ class ThreadDemo6{
             }
         };
         Thread max = new Thread(){
+            @Override
             public void run(){
                 for (int i = 0; i < 100 ; i++) {
                     System.out.println("max");
@@ -89,6 +91,7 @@ class ThreadDemo6{
             }
         };
         Thread norm = new Thread(){
+            @Override
             public void run(){
                 for (int i = 0; i < 100 ; i++) {
                     System.out.println("norm");

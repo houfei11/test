@@ -11,7 +11,7 @@ import java.util.List;
  * @author Administrator
  */
 public class OOSDemo {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         Person person = new Person();
         person.setName("小强");
         person.setAge(20);
@@ -23,6 +23,7 @@ public class OOSDemo {
         person.setOtherInfo(other);
         FileOutputStream fos = new FileOutputStream("xxx.txt");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
+
         /**
          * ObjectOutputStream的writeObject方法可以将给定对象转换成为一组字节后写出，
          * 这些字节比该对象实际内容要大，因为除了数据外还有结构等描述信息
@@ -72,6 +73,7 @@ class ISRDemo{
         while((d = isr.read()) != -1){
             System.out.println((char) d);
         }
+        isr.close();
     }
 }
 
