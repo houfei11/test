@@ -1,0 +1,37 @@
+select TO_CHAR(TO_DATE('98-02-16','YY-MM-DD'),'YYYY-MM-DD') FROM daul
+
+SELECT LAST_DAY(stuTime) FROM personal
+
+select stuName,ADD MONTHS(stuTime,12*20) FROM personal
+
+SELECT stuName, MONTHS_BETWEEN(stuName, stuTime) FROM personal
+
+SELECT NEXT_DAY(stuTime,7) FROM personal
+
+-- LEAST() GREATEST()
+SELECT LEAST(stuTime,TO_DATE('2019-03-28','YYYY-MM-DD')) FROM personal
+
+-- EXTRACT() 提取给定日期中指定时间分量的值
+SELECT EXTRACT(YEAR FROM stuTime) FROM personal
+
+SELECT stuName, stuTime FROM personal WHERE EXTRACT(YEAR FROM stuTime) = 2019
+
+CREATE TABLE student (id INT(4),NAME VARCHAR(4), genger CHAR(1))
+
+INSERT INTO student VALUES (1,'李莫愁','女')
+
+INSERT INTO student VALUES (2,'林平之','男')
+	
+INSERT INTO student VALUES (3,'令狐聪','男')
+
+UPDATE student SET genger = NULL WHERE id = 1
+
+select * FROM student
+
+DELETE FROM student WHERE genger IS NULL
+
+UPDATE student SET genger = NULL where id = 3
+
+SELECT id, NAME+genger FROM student WHERE id = 2
+
+SELECT id, NAME+NVL(genger,0) FROM student WHERE id = 3
